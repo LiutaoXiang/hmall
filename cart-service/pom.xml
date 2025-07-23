@@ -79,6 +79,12 @@
             <artifactId>feign-okhttp</artifactId>
             <version>13.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.heima</groupId>
+            <artifactId>hm-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

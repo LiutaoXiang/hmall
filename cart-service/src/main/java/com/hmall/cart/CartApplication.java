@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.hmall.api.client") //指定扫描包，要不然无法自动装配
 @MapperScan("com.hmall.cart.mapper")
 @SpringBootApplication
 public class CartApplication {
