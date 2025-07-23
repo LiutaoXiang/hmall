@@ -1,9 +1,11 @@
 package com.hmall.cart.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.cart.client.ItemClient;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.dto.ItemDTO;
 import com.hmall.cart.domain.po.Cart;
@@ -16,6 +18,8 @@ import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -41,8 +45,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
-//    private final IItemService itemService;
-    private final RestTemplate restTemplate;
+    private final ItemClient itemClient;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
@@ -92,8 +95,17 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         // 2.查询商品
 //        List<ItemDTO> items = itemService.queryItemByIds(itemIds);
 
+
+        /*//根据服务名称获取服务的实例列表
+        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
+        if(CollUtils.isEmpty(instances)){
+            return;
+        }
+        //手写负载均衡，从实例列表中挑选一个实例
+        ServiceInstance serviceInstance = instances.get(RandomUtil.randomInt(instances.size()));
+
         ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
-                "http://localhost:8081/items?ids={ids}",
+                serviceInstance.getUri() + "/items?ids={ids}",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<ItemDTO>>() {
@@ -105,7 +117,9 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         if(!response.getStatusCode().is2xxSuccessful()){
             return;
         }
-        List<ItemDTO> items = response.getBody();
+        List<ItemDTO> items = response.getBody();*/
+
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
 
         if (CollUtils.isEmpty(items)) {
             return;
