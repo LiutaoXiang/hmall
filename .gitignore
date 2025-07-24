@@ -35,7 +35,6 @@ replay_pid*
 !/.idea/vcs.xml
 
 !/.idea/workspace.xml
-!/.idea/misc.xml
 
 !/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/
 
@@ -51,6 +50,5 @@ replay_pid*
 /.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta
 /.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/sys.zb4BAA.meta
 !/.idea/
-!/.idea/workspace.xml
 !/.idea/encodings.xml
 !/.idea/compiler.xml
