@@ -2,12 +2,13 @@ package com.hmall.user.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hmall.api.dto.ItemDTO;
+import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.common.domain.PageDTO;
 import com.hmall.common.domain.PageQuery;
 import com.hmall.common.utils.BeanUtils;
 
-import com.hmall.user.domain.dto.ItemDTO;
-import com.hmall.user.domain.dto.OrderDetailDTO;
+
 import com.hmall.user.domain.po.Item;
 import com.hmall.user.service.IItemService;
 import io.swagger.annotations.Api;

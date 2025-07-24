@@ -1,8 +1,9 @@
 package com.hmall.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hmall.user.domain.dto.ItemDTO;
-import com.hmall.user.domain.dto.OrderDetailDTO;
+
+import com.hmall.api.dto.ItemDTO;
+import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.user.domain.po.Item;
 
 
