@@ -44,3 +44,9 @@ replay_pid*
 !/.idea/dataSources/
 !/logs/
 !/item-service.iml
+/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb.xml
+/.idea/dataSources.local.xml
+/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/mysql.osA4Bg.meta
+/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta
+/.idea/dataSources/43653cbd-f6c5-48c2-84ae-c372ff2c9aeb/storage_v2/_src_/schema/sys.zb4BAA.meta
