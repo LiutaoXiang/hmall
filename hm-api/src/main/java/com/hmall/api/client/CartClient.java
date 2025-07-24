@@ -12,6 +12,6 @@ import java.util.List;
 @FeignClient(name = "cart-service")
 public interface CartClient {
 
-    @DeleteMapping
-    public void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids);
+    @DeleteMapping("/carts")
+    void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids);
 }

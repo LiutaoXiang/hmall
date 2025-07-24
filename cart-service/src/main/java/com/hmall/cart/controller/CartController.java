@@ -13,6 +13,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Collection;
 import java.util.List;
 
 @Api(tags = "购物车相关接口")
@@ -48,7 +49,7 @@ public class CartController {
     @ApiOperation("批量删除购物车中商品")
     @ApiImplicitParam(name = "ids", value = "购物车条目id集合")
     @DeleteMapping
-    public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids){
+    public void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids){
         cartService.removeByItemIds(ids);
     }
 }
