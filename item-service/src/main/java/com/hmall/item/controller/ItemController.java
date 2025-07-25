@@ -1,6 +1,7 @@
 package com.hmall.item.controller;
 
 
+import cn.hutool.core.thread.ThreadUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
@@ -44,6 +45,7 @@ public class ItemController {
     @ApiOperation("根据id查询商品")
     @GetMapping("{id}")
     public ItemDTO queryItemById(@PathVariable("id") Long id) {
+
         return BeanUtils.copyBean(itemService.getById(id), ItemDTO.class);
     }
 

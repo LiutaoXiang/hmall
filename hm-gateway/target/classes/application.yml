@@ -12,3 +12,8 @@ hm:
       - /users/login
       - /items/**
       - /hi
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090 #sentinel控制台地址

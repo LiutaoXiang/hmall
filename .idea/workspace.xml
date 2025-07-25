@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e10e75f-5dce-4f73-8cbf-6116edd9d3f2" name="更改" comment="实现了网关和配置共享">
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/hmall/cart/config/CartProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-gateway/src/main/java/com/hmall/gateway/routers/DynamicRouteLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hm-gateway/src/main/resources/bootstrap.yaml" afterDir="false" />
+    <list default="true" id="7e10e75f-5dce-4f73-8cbf-6116edd9d3f2" name="更改" comment="实现动态路由">
+      <change afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/fallback/ItemClientFallbackFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/hmall/cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/hmall/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/target/classes/com/hmall/cart/service/impl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/target/classes/com/hmall/cart/service/impl/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hm-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hm-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hm-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/ItemClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/client/ItemClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/config/DefaultFeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hm-api/src/main/java/com/hmall/api/config/DefaultFeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hm-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hm-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item-service/src/main/java/com/hmall/item/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/main/java/com/hmall/item/controller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/cart-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/cart-service/spring.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/item-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/item-service/spring.log" afterDir="false" />
     </list>
@@ -220,7 +221,7 @@
       <updated>1753235476285</updated>
       <workItem from="1753235477919" duration="4656000" />
       <workItem from="1753241537407" duration="12260000" />
-      <workItem from="1753320730711" duration="30444000" />
+      <workItem from="1753320730711" duration="41507000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <option name="closed" value="true" />
@@ -374,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753360984978</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="实现动态路由">
+      <option name="closed" value="true" />
+      <created>1753364649871</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1753364649871</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +405,8 @@
     <MESSAGE value="完成支付服务的拆分" />
     <MESSAGE value="加入了SpringGateway路由" />
     <MESSAGE value="实现了网关和配置共享" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了网关和配置共享" />
+    <MESSAGE value="实现动态路由" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现动态路由" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
